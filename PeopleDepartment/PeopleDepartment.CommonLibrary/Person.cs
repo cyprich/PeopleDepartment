@@ -22,10 +22,19 @@ namespace PeopleDepartment.CommonLibrary
             Position = position;
             Email = email;
             Department = department;
-            TitleBefore = "";
-            TitleAfter = "";
-            // TODO TitleBefore and TitleAfter from displayName
+
+            TitleAfter = DisplayName.Contains(",") ? displayName.Split(",")[^1][1..] : "";
+
+            // TODO TitleBefore
+            var fields = displayName.Split(" ");
+            if (TitleAfter != "")
+            {
+                fields = fields[..^(TitleAfter.Split(" ").Length)];  // remove titles after name
+            }
+            fields = fields[..^2];  // remove name and surname 
+            TitleBefore = string.Join(" ", fields);
         }
+
 
         public string ToFormattedString()
         {

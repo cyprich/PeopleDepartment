@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <None Remove="people-fri.csv" />
+    <None Remove="templ-dep-sk.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="people-fri.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templ-dep-sk.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
