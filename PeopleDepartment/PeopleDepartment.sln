@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleDepartment.CommonLibrary", "PeopleDepartment.CommonLibrary\PeopleDepartment.CommonLibrary.csproj", "{C2C51895-55DD-43C1-9225-E9AD5C73EEF2}"
 EndProject
@@ -10,6 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleDepartment.EditorWpfApp", "PeopleDepartment.EditorWpfApp\PeopleDepartment.EditorWpfApp.csproj", "{CA0FFF56-A297-403C-AA22-BD2ADE3C159C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleDepartment.ViewerWpfApp", "PeopleDepartment.ViewerWpfApp\PeopleDepartment.ViewerWpfApp.csproj", "{8090DA7E-97CA-4690-AE3F-E718DE4E8591}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		people-fri.csv = people-fri.csv
+		templ-dep-en.txt = templ-dep-en.txt
+		templ-dep-sk.txt = templ-dep-sk.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
