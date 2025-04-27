@@ -22,12 +22,19 @@ namespace PeopleDepartment.CommonLibrary
             Position = position;
             Email = email;
             Department = department;
+            TitleBefore = "";
+            TitleAfter = "";
             // TODO TitleBefore and TitleAfter from displayName
         }
 
         public string ToFormattedString()
         {
-            return $"{DisplayName,40}{Email}";
+            return $"{DisplayName,-40}{Email}";
+        }
+
+        public override string ToString()
+        {
+            return DisplayName;
         }
     }
 }

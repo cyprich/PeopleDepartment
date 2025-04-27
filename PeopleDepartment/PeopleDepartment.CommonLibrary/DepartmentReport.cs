@@ -1,6 +1,6 @@
 ﻿namespace PeopleDepartment.CommonLibrary
 {
-    internal class DepartmentReport
+    public class DepartmentReport
     {
         public string Department { get; }
         public Person? Head { get; }

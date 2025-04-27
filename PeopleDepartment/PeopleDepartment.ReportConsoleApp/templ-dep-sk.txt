@@ -1,0 +1,16 @@
+﻿[[Department]]
+
+Vedúci: [[Head]]
+Zástupca vedúceho: [[Deputy]]
+Sekretariát: [[Secretary]]
+
+Celkový počet zamestnancov: [[NumberOfEmployees]]
+Počet profesorov (s titulom prof.): [[NumberOfProfessors]]
+Počet docentov (s titulom doc.): [[NumberOfAssociateProfessors]]
+Počet doktorandov (PhD. študentov): [[NumberOfPhDStudents]]
+
+Zamestnanci:
+[[Employees]]
+
+Doktorandi:
+[[PhDStudents]]

@@ -1,0 +1,138 @@
+FirstName;LastName;DisplayName;Position;Email;Department
+Peter;Novotný;Mgr. Peter Novotný, PhD.;;peter.novotny@fri.uniza.sk;Katedra softvérových technológií
+Tomáš;Majer;Ing. Tomáš Majer, PhD.;zástupca vedúceho;Tomas.Majer@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Hynek;Bachratý;RNDr. Hynek Bachratý, PhD.;zástupca vedúceho;Hynek.Bachraty@fri.uniza.sk;Katedra softvérových technológií
+Iveta;Belošovičová;Mgr. Iveta Belošovičová;sekretárka;Iveta.Belosovicova@fri.uniza.sk;Katedra softvérových technológií
+Viera;Černeková;Mgr. Viera Černeková;sekretárka;Viera.Cernekova@fri.uniza.sk;Katedra technickej kybernetiky
+Juraj;Miček;prof. Ing. Juraj Miček, PhD.;;Juraj.Micek@fri.uniza.sk;Katedra technickej kybernetiky
+Emil;Kršák;prof. Ing. Emil Kršák, PhD.;dekan;Emil.Krsak@fri.uniza.sk;Katedra softvérových technológií
+Ján;Ružbarský;Ing. Ján Ružbarský, PhD.;;Jan.Ruzbarsky@fri.uniza.sk;Katedra softvérových technológií
+Viliam;Tavač;Ing. Viliam Tavač, PhD.;vedúci;Viliam.Tavac@fri.uniza.sk;Katedra softvérových technológií
+Marek;Tavač;Ing. Marek Tavač, PhD.;;Marek.Tavac@fri.uniza.sk;Katedra softvérových technológií
+Pavel;Segeč;prof. Ing. Pavel Segeč, PhD.;vedúci;Pavol.Segec@fri.uniza.sk;Katedra informačných sietí
+Ľudmila;Jánošíková;prof. Ing. Ľudmila Jánošíková, PhD.;vedúci;Ludmila.Janosikova@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Anna;Ilovská;Anna Ilovská;sekretárka;Anna.Ilovska@fri.uniza.sk;Katedra informatiky
+Mária;Ďurišová;doc. Ing. Mária Ďurišová, PhD.;vedúci;Maria.Durisova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Ľubica;Michálková;Ing. Ľubica Michálková;sekretárka;Lubica.Michalkova@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Milan;Kubina;prof. Ing. Milan Kubina, PhD.;vedúci;Milan.Kubina@fri.uniza.sk;Katedra manažérských teórií
+Peter;Ševčík;doc. Ing. Peter Ševčík, PhD.;vedúci;Peter.Sevcik@fri.uniza.sk;Katedra technickej kybernetiky
+Alžbeta;Klaudinyová;RNDr. Alžbeta Klaudinyová;;Alzbeta.Klaudinyova@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Ida;Stankovianska;RNDr. Ida Stankovianska, CSc.;;Ida.Stankovianska@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Lýdia;Gábrišová;Mgr. Lýdia Gábrišová, PhD.;;Lydia.Gabrisova@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Rudolf;Blaško;RNDr. Rudolf Blaško, PhD.;;Rudolf.Blasko@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Peter;Czimmermann;Mgr. Peter Czimmermann, PhD.;;Peter.Czimmermann@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Zuzana;Borčinová;RNDr. Zuzana Borčinová, PhD.;;Zuzana.Borcinova@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Ján;Boháčik;doc. Ing. Ján Boháčik, PhD.;;Jan.Bohacik@fri.uniza.sk;Katedra informatiky
+Michal;Kvet;doc. Ing. Michal Kvet, PhD.;vedúci;Michal.Kvet@fri.uniza.sk;Katedra informatiky
+Miroslav;Kvaššay;doc. Ing. Miroslav Kvaššay, PhD.;prodekan pre vedu a výskum;Miroslav.Kvassay@fri.uniza.sk;Katedra informatiky
+Elena;Zaitseva;prof. Ing. Elena Zaitseva, PhD.;;Elena.Zaitseva@fri.uniza.sk;Katedra informatiky
+Vitaly;Levashenko;prof. Ing. Vitaly Levashenko, PhD.;;Vitaly.Levashenko@fri.uniza.sk;Katedra informatiky
+Monika;Václavková;Ing. Monika Václavková, PhD.;;Monika.Vaclavkova@fri.uniza.sk;Katedra informatiky
+Jozef;Kostolný;doc. Ing. Jozef Kostolný, PhD.;;Jozef.Kostolny@fri.uniza.sk;Katedra informatiky
+Ján;Kapitulík;doc. Ing. Ján Kapitulík, PhD.;;Jan.Kapitulik@fri.uniza.sk;Katedra technickej kybernetiky
+Lukáš;Čechovič;Ing. Lukáš Čechovič, PhD.;;Lukas.Cechovic@fri.uniza.sk;Katedra technickej kybernetiky
+Michal;Hodoň;doc. Ing. Michal Hodoň, PhD.;zástupca vedúceho;Michal.Hodon@fri.uniza.sk;Katedra technickej kybernetiky
+Štefan;Toth;Ing. Štefan Toth, PhD.;;Stefan.Toth@fri.uniza.sk;Katedra softvérových technológií
+Patrik;Hrkút;doc. Ing. Patrik Hrkút, PhD.;;Patrik.Hrkut@fri.uniza.sk;Katedra softvérových technológií
+Alžbeta;Kucharčíková;prof. Ing. Alžbeta Kucharčíková, PhD.;;Alzbeta.Kucharcikova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Miroslav;Gábor;Ing. Miroslav Gábor, PhD.;;Miroslav.Gabor@fri.uniza.sk;Katedra softvérových technológií
+Ján;Janech;doc. Ing. Ján Janech, PhD.;;Jan.Janech@fri.uniza.sk;Katedra softvérových technológií
+Anna;Jacková;doc. Ing. Anna Jacková, PhD.;;Anna.Jackova@pd.uniza.sk;Katedra makro a mikroekonomiky
+Ondrej;Karpiš;doc. Ing. Ondrej Karpiš, PhD.;;Ondrej.Karpis@pd.uniza.sk;Katedra technickej kybernetiky
+Martin;Klimo;prof. Ing. Martin Klimo, PhD.;;Martin.Klimo@fri.uniza.sk;Katedra informačných sietí
+Viliam;Lendel;doc. Ing. Viliam Lendel, PhD.;prodekan pre vzdelávanie;Viliam.Lendel@fri.uniza.sk;Katedra manažérských teórií
+Jaroslav;Janáček;prof. RNDr. Jaroslav Janáček, CSc.;;Jaroslav.Janacek@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Peter;Tarábek;Ing. Peter Tarábek, PhD.;;Peter.Tarabek@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Tatiana;Kováčiková;prof. Ing. Tatiana Kováčiková, PhD.;;Tatiana.Kovacikova@fri.uniza.sk;Katedra informačných sietí
+Zuzana;Kozubíková;Ing. Zuzana Kozubíková, PhD.;;Zuzana.Kozubikova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Lucia;Pančíková;Ing. Lucia Pančíková, PhD.;;Lucia.Pancikova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Zuzana;Staníková;Ing. Zuzana Staníková, PhD.;;Zuzana.Stanikova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Emese;Tokarčíková;doc. Ing. Emese Tokarčíková, PhD.;zástupca vedúceho;Emese.Tokarcikova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Ľuboš;Buzna;prof. Ing. Ľuboš Buzna, PhD.;;Lubos.Buzna@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Michal;Koháni;doc. Ing. Michal Koháni, PhD.;prodekan pre vedu a výskum;Michal.Kohani@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Peter;Márton;doc. Ing. Peter Márton, PhD.;prodekan pre zahraničné vzťahy;Peter.Marton@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Peter;Jankovič;Ing. Peter Jankovič, PhD.;;Peter.Jankovic@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Ondrej;Škvarek;Ing. Ondrej Škvarek, PhD.;;Ondrej.Skvarek@fri.uniza.sk;Katedra informačných sietí
+Jana;Uramová;Mgr. Jana Uramová, PhD.;zástupca vedúceho;jana.uramova@fri.uniza.sk;Katedra informačných sietí
+Katarína;Bachratá;doc. RNDr. Katarína Bachratá, PhD.;;Katarina.Bachrata@fri.uniza.sk;Katedra softvérových technológií
+Juraj;Smieško;doc. Mgr. Juraj Smieško, PhD.;;Juraj.Smiesko@fri.uniza.sk;Katedra informačných sietí
+Ivan;Cimrák;prof. Mgr. Ivan Cimrák, Dr.;;Ivan.Cimrak@fri.uniza.sk;Katedra softvérových technológií
+Radoslav;Jankal;doc. Ing. Radoslav Jankal, PhD.;zástupca vedúceho;Radoslav.Jankal@fri.uniza.sk;Katedra manažérských teórií
+Jakub;Soviar;prof. Mgr. Jakub Soviar, PhD.;;Jakub.Soviar@fri.uniza.sk;Katedra manažérských teórií
+Michal;Varmus;doc. Ing. Michal Varmus, PhD.;;Michal.Varmus@fri.uniza.sk;Katedra manažérských teórií
+Katarína;Zábovská;Ing. Katarína Zábovská, PhD.;;Katarina.Zabovska@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Aleš;Kozubík;RNDr. Aleš Kozubík, PhD.;;Ales.Kozubik@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Michal;Varga;Ing. Michal Varga, PhD.;;Michal.Varga@fri.uniza.sk;Katedra informatiky
+Lukáš;Falát;Ing. Lukáš Falát, PhD.;;Lukas.Falat@fri.uniza.sk;Katedra makro a mikroekonomiky
+Jozef;Papán;doc. Ing. Jozef Papán, PhD.;;Jozef.Papan@fri.uniza.sk;Katedra informačných sietí
+Matej;Meško;Ing. Matej Meško, PhD.;;Matej.Mesko@fri.uniza.sk;Katedra softvérových technológií
+Viera;Muchová;Viera Muchová;sekretárka;viera.muchova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Miroslav;Chochul;Ing. Miroslav Chochul, PhD.;;Miroslav.Chochul@st.fri.uniza.sk;Katedra technickej kybernetiky
+Peter;Šarafín;Ing. Peter Šarafín, PhD.;;Peter.Sarafin@fri.uniza.sk;Katedra technickej kybernetiky
+Lukáš;Formanek;Ing. Lukáš Formanek, PhD.;;Lukas.Formanek@fri.uniza.sk;Katedra technickej kybernetiky
+Veronika;Olešnaníková;Ing. Veronika Olešnaníková, PhD.;;Veronika.Olesnanikova@fri.uniza.sk;Katedra technickej kybernetiky
+Gabriel;Koman;doc. Ing. Gabriel Koman, PhD.;;Gabriel.Koman@fri.uniza.sk;Katedra manažérských teórií
+Eva;Malichová;Ing. Eva Malichová, PhD.;;Eva.Malichova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Ján;Jurč;Ing. Ján Jurč;doktorand;jan.jurc@fri.uniza.sk;Katedra informačných sietí
+Martin;Mazúch;Ing. Martin Mazúch;doktorand;Martin.Mazuch@fri.uniza.sk;Katedra informatiky
+Andrej;Tupý;Ing. Andrej Tupý;doktorand;Andrej.Tupy@fri.uniza.sk;Katedra technickej kybernetiky
+Ivana;Gabrišová;Ing. Ivana Gabrišová;doktorand;Ivana.Gabrisova@fri.uniza.sk;Katedra manažérských teórií
+Dominika;Petríková;Ing. Dominika Petríková, PhD.;;Dominika.Petrikova@fri.uniza.sk;Katedra softvérových technológií
+Michal;Kubaščík;Ing. Michal Kubaščík;doktorand;Michal.Kubascik@fri.uniza.sk;Katedra technickej kybernetiky
+Michal;Mrena;Ing. Michal Mrena, PhD.;;Michal.Mrena@fri.uniza.sk;Katedra informatiky
+Miroslav;Potočár;Ing. Miroslav Potočár;doktorand;Miroslav.Potocar@fri.uniza.sk;Katedra informatiky
+Ľubica;Žideková;Ing. Ľubica Žideková;doktorand;Lubica.Zidekova@fri.uniza.sk;Katedra informačných sietí
+Dávid;Matis;Ing. Dávid Matis;doktorand;David.Matis@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Dominika;Findriková;Ing. Dominika Findriková;doktorand;Dominika.Findrikova@fri.uniza.sk;Katedra manažérských teórií
+Paula;Höhrová;Ing. Paula Höhrová;doktorand;Paula.Hohrova@fri.uniza.sk;Katedra manažérských teórií
+Silvia;Krúpová;Ing. Silvia Krúpová;doktorand;Silvia.Krupova@fri.uniza.sk;Katedra manažérských teórií
+Patrik;Boršoš;Ing. Patrik Boršoš;doktorand;Patrik.Borsos@fri.uniza.sk;Katedra manažérských teórií
+Ľubomír;Králik;Ing. Ľubomír Králik;doktorand;Lubomir.Kralik@fri.uniza.sk;Katedra informačných sietí
+Linda;Blahová;Ing. Linda Blahová;doktorand;Linda.Blahova@fri.uniza.sk;Katedra informatiky
+Michal;Janovec;Ing. Michal Janovec;doktorand;Michal.Janovec@fri.uniza.sk;Katedra informačných sietí
+Michal;Šarlák;Ing. Michal Šarlák;doktorand;Michal.Sarlak@fri.uniza.sk;Katedra manažérských teórií
+Nikola;Štaffenová;Ing. Nikola Štaffenová, PhD.;;Nikola.Staffenova@fri.uniza.sk;Katedra manažérských teórií
+Marek;Ďurana;Ing. Marek Ďurana;doktorand;Marek.Durana@fri.uniza.sk;Katedra informatiky
+Michal;Hraška;Ing. Michal Hraška;doktorand;Michal.Hraska@fri.uniza.sk;Katedra informačných sietí
+Dalibor;Kafka;Ing. Dalibor Kafka;doktorand;Dalibor.Kafka@fri.uniza.sk;Katedra informačných sietí
+Michal;Mulík;Ing. Michal Mulík, PhD.;;Michal.Mulik@fri.uniza.sk;Katedra softvérových technológií
+Michal;Šterbák;Ing. Michal Šterbák, PhD.;;michal.sterbak@fri.uniza.sk;Katedra informačných sietí
+Lucia;Piatriková;Ing. Lucia Piatriková;doktorand;Lucia.Piatrikova@fri.uniza.sk;Katedra softvérových technológií
+Martin;Kontšek;Ing. Martin Kontšek, PhD.;;Martin.Kontsek@fri.uniza.sk;Katedra informačných sietí
+Marek;Moravčík;Ing. Marek Moravčík, PhD.;;Marek.Moravcik@fri.uniza.sk;Katedra informačných sietí
+Marek;Kvet;doc. Ing. Marek Kvet, PhD.;;Marek.Kvet@fri.uniza.sk;Katedra informatiky
+Maroš;Janovec;Ing. Maroš Janovec, PhD.;;Maros.Janovec@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Denisa;Maceková;RNDr. Denisa Maceková, PhD.;;Denisa.Macekova@fri.uniza.sk;Katedra informatiky
+Patrik;Rusnák;Ing. Patrik Rusnák, PhD.;;Patrik.Rusnak@fri.uniza.sk;Katedra informatiky
+Ján;Rabčan;doc. Ing. Ján Rabčan, PhD.;;Jan.Rabcan@fri.uniza.sk;Katedra informatiky
+Peter;Sedláček;Ing. Peter Sedláček, PhD.;zástupca vedúceho;Peter.Sedlacek@fri.uniza.sk;Katedra informatiky
+Martin;Holubčík;Ing. Martin Holubčík, PhD.;;Martin.Holubcik@fri.uniza.sk;Katedra manažérských teórií
+Dominika;Toman;Ing. Dominika Toman, PhD.;;Dominika.Tumova@uniza.sk;Katedra manažérských teórií
+Monika;Smiešková;Mgr. Monika Smiešková, PhD.;;Monika.Smieskova@fri.uniza.sk;Katedra softvérových technológií
+Michal;Ďuračík;Ing. Michal Ďuračík, PhD.;;Michal.Duracik@fri.uniza.sk;Katedra softvérových technológií
+Kristína;Ďuračíková;Mgr. Kristína Ďuračíková, PhD.;;Kristina.Kovalcikova@fri.uniza.sk;Katedra softvérových technológií
+Lucie;Lendelová;Ing. Lucie Lendelová, Ph.D. MBA;;Lucie.Lendelova@fri.uniza.sk;Katedra manažérských teórií
+Alžbeta;Bugáňová;Mgr. Alžbeta Bugáňová, PhD.;;alzbeta.buganova@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Veronika;Šalgová;Ing. Veronika Šalgová, PhD.;;Veronika.Salgova@fri.uniza.sk;Katedra informatiky
+Andrej;Michalek;Ing. Andrej Michalek;doktorand;Andrej.Michalek@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Aneta;Gábrišová;Ing. Aneta Gábrišová;doktorand;Aneta.Gabrisova@fri.uniza.sk;Katedra softvérových technológií
+Slavomír;Tatarka;Ing. Slavomír Tatarka;doktorand;Slavomir.Tatarka@fri.uniza.sk;Katedra informačných sietí
+Pavol;Ondrík;Ing. Pavol Ondrík;doktorand;Pavol.Ondrik@fri.uniza.sk;Katedra manažérských teórií
+Jakub;Rapšík;Ing. Jakub Rapšík;doktorand;Jakub.Rapsik@fri.uniza.sk;Katedra informatiky
+Tomáš;Bača;Ing. Tomáš Bača;doktorand;Tomas.Baca@fri.uniza.sk;Katedra technickej kybernetiky
+Andrea;Meleková;Ing. Andrea Meleková;doktorand;Andrea.Melekova@fri.uniza.sk;Katedra informatiky
+Dana;Kušnírová;Ing. Dana Kušnírová, PhD.;;dana.kusnirova@fri.uniza.sk;Katedra makro a mikroekonomiky
+Oliver;Bubelíny;Ing. Oliver Bubelíny, PhD.;;oliver.bubeliny@fri.uniza.sk;Katedra manažérských teórií
+Ivana;Brídová;Ing. Ivana Brídová, PhD.;;bridova1@fri.uniza.sk;Katedra informačných sietí
+Michal;Kochláň;Ing. Michal Kochláň;doktorand;michal.kochlan@fri.uniza.sk;Katedra technickej kybernetiky
+Dalibor;Gonda;doc. PaedDr. Dalibor Gonda, PhD.;;dalibor.gonda@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Martin;Mičiak;Ing. Martin Mičiak, PhD.;;martin.miciak@fri.uniza.sk;Katedra manažérských teórií
+Roman;Kaloč;Ing. Roman Kaloč, PhD.;;roman.kaloc@fri.uniza.sk;Katedra informačných sietí
+Nika;Kvaššayová;PaedDr. Nika Kvaššayová, PhD.;;Nika.Kvassayova@fri.uniza.sk;Katedra informatiky
+Adrián;Hamada;Mgr. Adrián Hamada;doktorand;Adrian.Hamada@fri.uniza.sk;Katedra informačných sietí
+Marek;Klimo;Ing. Marek Klimo;doktorand;Marek.Klimo@fri.uniza.sk;Katedra informatiky
+Ján;Šumský;Ing. Ján Šumský;doktorand;Jan.Sumsky@fri.uniza.sk;Katedra technickej kybernetiky
+Andrea;Galadíková;Ing. Andrea Galadíková, PhD.;;Andrea.Galadikova@fri.uniza.sk;Katedra matematických metód a operačnej analýzy
+Roman;Adámik;Ing. Roman Adámik, PhD.;;roman.adamik@fri.uniza.sk;Katedra manažérských teórií
+Brigita;Malkusová;Ing. Brigita Malkusová;sekretárka;brigita.malkusova@fri.uniza.sk;Katedra informačných sietí
+Miroslava;Řepová;Ing. Miroslava Řepová;doktorand;Miroslava.Repova@fri.uniza.sk;Katedra manažérských teórií

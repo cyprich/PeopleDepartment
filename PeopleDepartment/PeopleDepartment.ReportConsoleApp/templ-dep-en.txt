@@ -1,0 +1,16 @@
+﻿[[Department]]
+
+Head: [[Head]]
+Deputy: [[Deputy]]
+Secretary: [[Secretary]]
+
+Total number of employees: [[NumberOfEmployees]]
+Number of professors (with title prof.): [[NumberOfProfessors]]
+Number of associative professors (with title doc.): [[NumberOfAssociateProfessors]]
+Number of PhD. students: [[NumberOfPhDStudents]]
+
+Employees:
+[[Employees]]
+
+PhD. students:
+[[PhDStudents]]
