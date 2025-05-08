@@ -6,7 +6,7 @@ namespace PeopleDepartment.CommonLibrary
     {
         public int Count { get; }
         public bool IsReadOnly { get; }
-        public event NotifyCollectionChangedEventHandler? CollectionChanged;
+        public event NotifyCollectionChangedEventHandler? CollectionChanged;  // TODO
         private readonly List<Person> _people = [];
 
         public void Add(Person person) { _people.Add(person); }
@@ -27,7 +27,17 @@ namespace PeopleDepartment.CommonLibrary
             }
         }
 
-        //public void saveToCSV(FileInfo csvFile) { }
+        public void saveToCSV(FileInfo csvFile)
+        {
+            var lines = new List<string>();
+
+            foreach (var p in _people)
+            {
+                lines.Add(p.ToCSV());
+            }
+
+            File.WriteAllLines(csvFile.Name, lines);
+        }
 
         public DepartmentReport[] GenerateDepartmentReports()
         {

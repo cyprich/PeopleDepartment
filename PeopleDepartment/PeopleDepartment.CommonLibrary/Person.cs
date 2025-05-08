@@ -12,6 +12,8 @@ namespace PeopleDepartment.CommonLibrary
         public string? Position { get; set; }
         public string Email { get; set; }
         public string Department { get; set; }
+
+        // TODO
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public Person(string firstName, string lastName, string displayName, string? position, string email, string department)
@@ -35,7 +37,6 @@ namespace PeopleDepartment.CommonLibrary
             TitleBefore = string.Join(" ", fields);
         }
 
-
         public string ToFormattedString()
         {
             return $"{DisplayName,-40}{Email}";
@@ -44,6 +45,11 @@ namespace PeopleDepartment.CommonLibrary
         public override string ToString()
         {
             return DisplayName;
+        }
+
+        public string ToCSV(string delimiter = ";")
+        {
+            return string.Join(delimiter, [FirstName, LastName, DisplayName, Position, Email, Department]);
         }
     }
 }
