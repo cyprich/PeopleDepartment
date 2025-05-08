@@ -6,7 +6,94 @@
         xmlns:local="clr-namespace:PeopleDepartment.ViewerWpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
+        <!-- row 0 = open, department select -->
+        <Button Click="OpenButton_OnClick" Content="Open..." 
+                Padding="8,4" Margin="0,0,8,0" 
+                Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text="Department" VerticalAlignment="Center" 
+                   Margin="0,0,8,0"  
+                   Grid.Row="0" Grid.Column="1" />
+        <ComboBox x:Name="DepartmentComboBox" VerticalAlignment="Center" 
+                  Padding="8,4" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
+                  SelectionChanged="DepartmentComboBox_OnSelectionChanged"/>
+
+        <!-- row 1 = head -->
+        <TextBlock Grid.Row="1" Grid.Column="0"
+            Text="Head: " FontWeight="Bold" Margin="0, 8, 0, 0"/>
+        <TextBlock x:Name="HeadTextBox" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom"/>
+
+        <!-- row 2 = deputy -->
+        <TextBlock Grid.Row="2" Grid.Column="0"
+            Text="Deputy: " FontWeight="Bold" Margin="0, 0, 0, 0"/>
+        <TextBlock x:Name="DeputyTextBox" Grid.Row="2" Grid.Column="1"/>
+
+        <!-- row 3 = secretary -->
+        <TextBlock Grid.Row="3" Grid.Column="0"
+            Text="Secretary: " FontWeight="Bold" Margin="0, 0, 0, 0"/>
+        <TextBlock x:Name="SecretaryTextBox" Grid.Row="3" Grid.Column="1"/>
+
+        <!-- row 4 = employees (text) -->
+        <TextBlock Text="Employees:" FontWeight="Bold" 
+                   Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" 
+                   Margin="0, 8, 0, 0"/>
+        <StackPanel Grid.Row="4" Grid.Column="3" Orientation="Horizontal" VerticalAlignment="Bottom">
+            <TextBlock Text="Count: " FontWeight="Bold"/>
+            <TextBlock Text="{Binding Items.Count, ElementName=EmployeeDataGrid}" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- row 5 = employees (grid) -->
+        <DataGrid x:Name="EmployeeDataGrid" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" 
+                  Margin="0,4,0,0" Height="160" 
+                  IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title Before" Binding="{Binding TitleBefore}"/>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Title After" Binding="{Binding TitleAfter}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- row 6 = phd students (text) -->
+        <TextBlock Text="PhD Students:" FontWeight="Bold" 
+                   Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" 
+                   Margin="0, 8, 0, 0"/>
+        <StackPanel Grid.Row="6" Grid.Column="3" Orientation="Horizontal" VerticalAlignment="Bottom">
+            <TextBlock Text="Count: " FontWeight="Bold"/>
+            <TextBlock Text="{Binding Items.Count, ElementName=PhDDataGrid}" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- row 7 = phd students (grid) -->
+        <DataGrid x:Name="PhDDataGrid" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" 
+                  Margin="0,4,0,0" Height="160" 
+                  IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title Before" Binding="{Binding TitleBefore}"/>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Title After" Binding="{Binding TitleAfter}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
