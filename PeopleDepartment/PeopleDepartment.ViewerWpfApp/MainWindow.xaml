@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PeopleDepartment.ViewerWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="People Department Viewer" Height="450" Width="800">
     <Grid Margin="8">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -13,9 +13,9 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -61,7 +61,7 @@
 
         <!-- row 5 = employees (grid) -->
         <DataGrid x:Name="EmployeeDataGrid" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" 
-                  Margin="0,4,0,0" Height="160" 
+                  Margin="0,4,0,0"
                   IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title Before" Binding="{Binding TitleBefore}"/>
@@ -84,7 +84,7 @@
 
         <!-- row 7 = phd students (grid) -->
         <DataGrid x:Name="PhDDataGrid" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" 
-                  Margin="0,4,0,0" Height="160" 
+                  Margin="0,4,0,0" 
                   IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title Before" Binding="{Binding TitleBefore}"/>

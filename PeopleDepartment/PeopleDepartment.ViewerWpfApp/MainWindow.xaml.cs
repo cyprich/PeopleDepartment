@@ -25,15 +25,12 @@ namespace PeopleDepartment.ViewerWpfApp
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void OpenButton_OnClick(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new()
-            {
-                Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*"
-            };
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "CSV files (*.csv)|*.csv";
 
             if (openFileDialog.ShowDialog() == true)
             {
