@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PeopleDepartment.ReportConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "--template templ-dep-en.txt --input people-fri.csv"
+    }
+  }
+}
