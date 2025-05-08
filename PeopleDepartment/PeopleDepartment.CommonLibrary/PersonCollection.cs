@@ -1,8 +1,9 @@
-﻿using System.Collections.Specialized;
+﻿using System.Collections;
+using System.Collections.Specialized;
 
 namespace PeopleDepartment.CommonLibrary
 {
-    public class PersonCollection
+    public class PersonCollection: ICollection<Person>, INotifyCollectionChanged
     {
         public int Count { get; }
         public bool IsReadOnly { get; }
@@ -11,13 +12,20 @@ namespace PeopleDepartment.CommonLibrary
 
         public void Add(Person person) { _people.Add(person); }
 
+        public void CopyTo(Person[] array, int arrayIndex)
+        {
+            // TODO
+            throw new NotImplementedException();
+        }
+
         public bool Remove(Person person) { return _people.Remove(person); }
 
         public IEnumerator<Person> GetEnumerator() { return _people.GetEnumerator(); }
 
         public void LoadFromCSV(FileInfo csvFile)
         {
-            var lines = File.ReadAllLines(csvFile.Name);
+            var lines = File.ReadAllLines(csvFile.FullName);
+
             lines = lines[1..];  // skip first line with field names
 
             foreach (var line in lines)
@@ -124,8 +132,6 @@ namespace PeopleDepartment.CommonLibrary
 
         public bool Contains(Person person) { return _people.Contains(person); }
 
-        //public void CopyTo(Person[] array, int arrayIndex) { }
-
         public override string ToString()
         {
             string result = "";
@@ -136,6 +142,11 @@ namespace PeopleDepartment.CommonLibrary
             }
 
             return result;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
