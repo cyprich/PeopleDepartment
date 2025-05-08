@@ -8,4 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PeopleDepartment.CommonLibrary\PeopleDepartment.CommonLibrary.csproj" />
+    <ProjectReference Include="..\PeopleDepartment.ViewerWpfApp\PeopleDepartment.ViewerWpfApp.csproj" />
+  </ItemGroup>
+
 </Project>

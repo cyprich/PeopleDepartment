@@ -1,0 +1,54 @@
+﻿<Window x:Class="PeopleDepartment.EditorWpfApp.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PeopleDepartment.EditorWpfApp"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="450" Width="800">
+    <Grid Margin="8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- row 0 = display name -->
+        <TextBlock  Grid.Row="0" Grid.Column="0" Text="Display Name"/>
+        <TextBox Grid.Row="0" Grid.Column="1" IsReadOnly="True"/>
+
+        <!-- row 0 = display name -->
+        <TextBlock  Grid.Row="1" Grid.Column="0" Text="Display Name"/>
+        <TextBox Grid.Row="1" Grid.Column="1" IsReadOnly="True"/>
+
+        <!-- row 0 = display name -->
+        <TextBlock  Grid.Row="2" Grid.Column="0" Text="Display Name"/>
+        <TextBox Grid.Row="2" Grid.Column="1" IsReadOnly="True"/>
+
+        <!-- row 0 = display name -->
+        <TextBlock  Grid.Row="3" Grid.Column="0" Text="Display Name"/>
+        <TextBox Grid.Row="3" Grid.Column="1" IsReadOnly="True"/>
+
+        <!-- row 0 = display name -->
+        <TextBlock  Grid.Row="4" Grid.Column="0" Text="Display Name"/>
+        <TextBox Grid.Row="4" Grid.Column="1" IsReadOnly="True"/>
+
+        <!-- row 0 = display name -->
+        <TextBlock  Grid.Row="5" Grid.Column="0" Text="Display Name"/>
+        <TextBox Grid.Row="5" Grid.Column="1" IsReadOnly="True"/>
+
+        <!-- row 0 = display name -->
+        <TextBlock  Grid.Row="6" Grid.Column="0" Text="Display Name"/>
+        <TextBox Grid.Row="6" Grid.Column="1" IsReadOnly="True"/>
+    </Grid>
+</Window>

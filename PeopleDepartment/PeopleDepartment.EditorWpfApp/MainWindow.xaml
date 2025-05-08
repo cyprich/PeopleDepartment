@@ -5,8 +5,105 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PeopleDepartment.EditorWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="People Department Editor" Height="450" Width="800">
 
-    </Grid>
+    <DockPanel>
+        <!-- https://stackoverflow.com/questions/9936796/create-a-menu-bar-in-wpf -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Click="HandleNew"/>
+                <MenuItem Header="_Open..." Click="HandleOpen"/>
+                <MenuItem Header="_Save As..." Click="HandleSave"/>
+                <Separator/>
+                <MenuItem Header="_Exit" Click="HandleExit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Add" Click="HandleAdd"/>
+                <MenuItem Header="_Edit" Click="HandleEdit"/>
+                <MenuItem Header="_Remove" Click="HandleRemove"/>
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="_View by Department..." Click="HandleView"/>
+            </MenuItem>
+            <MenuItem Header="About" Click="HandleAbout"/>
+        </Menu>
+
+        <!-- actual content -->
+        <Grid Margin="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- column 0 = new -->
+            <Button Grid.Row="0" Grid.Column="0" Content="New..."
+                Padding="8 4" Click="HandleNew"/>
+
+            <!-- column 1 = open -->
+            <Button Grid.Row="0" Grid.Column="1" Content="Open..."
+                Padding="8 4" Margin="6 0 0 0" 
+                Click="HandleOpen"/>
+
+            <!-- column 2 = save as -->
+            <Button Grid.Row="0" Grid.Column="2" Content="Save as..."
+                Padding="8 4" Margin="6 0 0 0"
+                Click="HandleSave"/>
+
+            <!-- column 3 row 1 - view -->
+            <Button Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" 
+                Content="View by department" Padding="8 4" 
+                Click="HandleView"/>
+
+            <!-- column 3 row 2 - add -->
+            <Button Grid.Row="1" Grid.Column="5" Content="Add..."
+                Padding="8 4"  Margin="0 4"
+                Click="HandleAdd"/>
+
+            <!-- column 3 row 3 - edit -->
+            <Button Grid.Row="2" Grid.Column="5" Content="Edit..."
+                Padding="8 4"  Margin="0 4"
+                Click="HandleEdit"/>
+
+            <!-- column 3 row 4 - remove -->
+            <Button Grid.Row="3" Grid.Column="5" Content="Remove"
+                Padding="8 4"  Margin="0 4"
+                Click="HandleRemove"/>
+
+            <!-- column 3 row 5 - remove -->
+            <StackPanel Grid.Row="4" Grid.Column="5">
+                <TextBlock Text="Count: "/>
+                <TextBlock FontWeight="Bold"
+                    Text="{Binding Items.Count, ElementName=MainDataGrid}"/>
+            </StackPanel>
+            
+            <!-- main content - datagrid -->
+            <DataGrid x:Name="MainDataGrid"  Grid.Row="1" Grid.Column="0" 
+                Grid.ColumnSpan="5"  Grid.RowSpan="5"
+                Margin="0 4 4 0" 
+                AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Display Name" Binding="{Binding DisplayName}"/>
+                    <DataGridTextColumn Header="Title Before" Binding="{Binding TitleBefore}"/>
+                    <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Header="Title After" Binding="{Binding TitleAfter}"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
+                    <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
 </Window>
