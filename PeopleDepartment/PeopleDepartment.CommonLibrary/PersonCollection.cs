@@ -105,7 +105,7 @@ namespace PeopleDepartment.CommonLibrary
                             {
                                 profs++;
                             }
-                            else if (p.TitleBefore.Contains("doc. "))
+                            else if (p.TitleBefore.Contains("doc."))
                             {
                                 docs++;
                             }
@@ -127,7 +127,9 @@ namespace PeopleDepartment.CommonLibrary
                 ));
             }
 
-            return result.ToArray();
+            // it was giving warning
+            var x = result.ToArray();
+            return x;
         }
 
         public void LoadFromCsv(FileInfo csvFile)
@@ -149,7 +151,7 @@ namespace PeopleDepartment.CommonLibrary
 
             foreach (var p in _people)
             {
-                lines.Add(p.ToCSV());
+                lines.Add(p.ToCsv());
             }
 
             File.WriteAllLines(csvFile.FullName, lines);

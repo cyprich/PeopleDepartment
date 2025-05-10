@@ -20,7 +20,7 @@ namespace PeopleDepartment.EditorWpfApp
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        private readonly PersonCollection _personCollection = new();
+        private readonly PersonCollection _personCollection = [];
         private bool _wasCollectionModified = false;
 
         private bool _editEnabled;
@@ -36,7 +36,6 @@ namespace PeopleDepartment.EditorWpfApp
 
             MainDataGrid.ItemsSource = _personCollection;
         }
-
 
         private void HandleAbout(object sender, RoutedEventArgs e)
         {
@@ -56,8 +55,10 @@ namespace PeopleDepartment.EditorWpfApp
         {
             if (HandleModifiedCollection())
             {
-                var openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+                var openFileDialog = new OpenFileDialog
+                {
+                    Filter = "CSV Files (*.csv)|*.csv"
+                };
 
                 if (openFileDialog.ShowDialog() == true)
                 {
@@ -69,8 +70,10 @@ namespace PeopleDepartment.EditorWpfApp
 
         private void HandleSave(object sender, RoutedEventArgs e)
         {
-            var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "CSV files (*.csv)|*.csv";
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = "CSV files (*.csv)|*.csv"
+            };
 
             if (saveFileDialog.ShowDialog() == true)
             {
@@ -206,12 +209,12 @@ namespace PeopleDepartment.EditorWpfApp
         public bool EditEnabled
         {
             get => _editEnabled;
-            set { _editEnabled = value; OnPropertyChanged("EditEnabled"); }
+            set { _editEnabled = value; OnPropertyChanged(nameof(EditEnabled)); }
         } 
         public bool RemoveEnabled
         {
             get => _removeEnabled;
-            set { _removeEnabled = value; OnPropertyChanged("RemoveEnabled"); }
+            set { _removeEnabled = value; OnPropertyChanged(nameof(RemoveEnabled)); }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -219,6 +222,15 @@ namespace PeopleDepartment.EditorWpfApp
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // https://stackoverflow.com/questions/3935583/ask-the-user-before-closing-c-sharp-wpf-application
+        private void MainWindow_OnClosing(object? sender, CancelEventArgs e)
+        {
+            if (!HandleModifiedCollection())
+            {
+                e.Cancel = true;
+            };
         }
     }
 }

@@ -47,7 +47,7 @@ namespace PeopleDepartment.EditorWpfApp
 
                 FirstNameTextBox.Text = person.FirstName;
                 LastNameTextBox.Text = person.LastName;
-                DisplayNameTextBox.Text = person.DisplayName;
+                DisplayNameTextBox.Text = person.DisplayName;  //
                 TitleBeforeTextBox.Text = person.TitleBefore ?? "";
                 TitleAfterTextBox.Text = person.TitleAfter ?? "";
                 PositionTextBox.Text = person.Position ?? "";

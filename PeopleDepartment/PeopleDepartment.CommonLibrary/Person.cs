@@ -2,22 +2,105 @@
 
 namespace PeopleDepartment.CommonLibrary
 {
-    public class Person
+    public class Person : INotifyPropertyChanged
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string DisplayName { get; set; }
-        public string? TitleBefore { get; set; }
-        public string? TitleAfter { get; set; }
-        public string? Position { get; set; }
-        public string Email { get; set; }
-        public string Department { get; set; }
+        private string _firstName;
+        public string FirstName
+        {
+            get => _firstName;
+            set
+            {
+                _firstName = value;
+                OnPropertyChanged(nameof(FirstName));
+            }
+        }
 
-        // TODO
-        public event PropertyChangedEventHandler? PropertyChanged;
+        private string _lastName;
+        public string LastName
+        {
+            get => _lastName;
+            set
+            {
+                _lastName = value;
+                OnPropertyChanged(nameof(LastName));
+            }
+        }
+
+        private string _displayName;
+        public string DisplayName
+        {
+            get => _displayName;
+            set
+            {
+                _displayName = value;
+                OnPropertyChanged(nameof(DisplayName));
+            }
+        }
+
+        private string? _titleBefore;
+        public string? TitleBefore
+        {
+            get => _titleBefore;
+            set
+            {
+                _titleBefore = value;
+                OnPropertyChanged(nameof(TitleBefore));
+            }
+        }
+
+        private string? _titleAfter;
+        public string? TitleAfter
+        {
+            get => _titleAfter;
+            set
+            {
+                _titleAfter = value;
+                OnPropertyChanged(nameof(TitleAfter));
+            }
+        }
+
+        private string? _position;
+        public string? Position
+        {
+            get => _position;
+            set
+            {
+                _position = value;
+                OnPropertyChanged(nameof(Position));
+            }
+        }
+
+        private string _email;
+        public string Email
+        {
+            get => _email;
+            set
+            {
+                _email = value;
+                OnPropertyChanged(nameof(Email));
+            }
+        }
+
+        private string _department;
+        public string Department
+        {
+            get => _department;
+            set
+            {
+                _department = value;
+                OnPropertyChanged(nameof(Department));
+            }
+        }
 
         public Person(string firstName, string lastName, string displayName, string? position, string email, string department)
         {
+            _firstName = firstName;
+            _lastName = lastName;
+            _displayName = displayName;
+            _position = position;
+            _email = email;
+            _department = department;
+
             FirstName = firstName;
             LastName = lastName;
             DisplayName = displayName;
@@ -25,8 +108,10 @@ namespace PeopleDepartment.CommonLibrary
             Email = email;
             Department = department;
 
-            TitleAfter = DisplayName.Contains(",") ? displayName.Split(",")[^1][1..] : "";
+            // title after
+            TitleAfter = DisplayName.Contains(',') ? displayName.Split(",")[^1][1..] : "";
 
+            // title before
             var fields = displayName.Split(" ");
             if (TitleAfter != "")
             {
@@ -46,9 +131,16 @@ namespace PeopleDepartment.CommonLibrary
             return DisplayName;
         }
 
-        public string ToCSV(string delimiter = ";")
+        public string ToCsv(string delimiter = ";")
         {
             return string.Join(delimiter, [FirstName, LastName, DisplayName, Position, Email, Department]);
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

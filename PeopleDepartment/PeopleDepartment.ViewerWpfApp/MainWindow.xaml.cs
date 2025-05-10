@@ -19,19 +19,21 @@ namespace PeopleDepartment.ViewerWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly PersonCollection _personCollection = new();
+        private readonly PersonCollection _personCollection = [];
         private DepartmentReport[]? _reports;
 
-        public MainWindow(PersonCollection? personCollection = null)
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        public MainWindow(PersonCollection personCollection)
         {
             InitializeComponent();
 
-            if (personCollection != null)
-            {
-                _personCollection = personCollection;
-                OpenButton.IsEnabled = false;
-                GenerateReports();
-            }
+            _personCollection = personCollection;
+            OpenButton.IsEnabled = false;
+            GenerateReports();
         }
 
         private void GenerateReports()
@@ -43,8 +45,10 @@ namespace PeopleDepartment.ViewerWpfApp
 
         private void OpenButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV files (*.csv)|*.csv";
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "CSV files (*.csv)|*.csv"
+            };
 
             if (openFileDialog.ShowDialog() == true)
             {
