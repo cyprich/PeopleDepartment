@@ -27,7 +27,6 @@ namespace PeopleDepartment.CommonLibrary
 
             TitleAfter = DisplayName.Contains(",") ? displayName.Split(",")[^1][1..] : "";
 
-            // TODO TitleBefore
             var fields = displayName.Split(" ");
             if (TitleAfter != "")
             {

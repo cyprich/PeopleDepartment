@@ -27,40 +27,40 @@
         <!-- row 0 = display name -->
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Display Name" Margin="0 0 8 4"/>
         <TextBox Grid.Row="0" Grid.Column="1" IsReadOnly="True" x:Name="DisplayNameTextBox"
-                 Text="{Binding DisplayName}"/>
+                 Text="{Binding DisplayName}" IsEnabled="False"/>
 
         <!-- row 1 = title before -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Title Before" Margin="0 4"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Title Before:" Margin="0 4"/>
         <TextBox Grid.Row="1" Grid.Column="1" Margin="0 4" x:Name="TitleBeforeTextBox" 
                  TextChanged="OnTextChanged"/>
 
         <!-- row 2 = first name -->
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="First Name*" Margin="0 4"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="*First Name:" Margin="0 4"/>
         <TextBox Grid.Row="2" Grid.Column="1" Margin="0 4" x:Name="FirstNameTextBox"
                  TextChanged="OnTextChanged"/>
 
         <!-- row 3 = last name -->
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="Last Name*" Margin="0 4"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="*Last Name:" Margin="0 4"/>
         <TextBox Grid.Row="3" Grid.Column="1" Margin="0 4" x:Name="LastNameTextBox"
                  TextChanged="OnTextChanged"/>
 
         <!-- row 4 = title after -->
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Title After" Margin="0 4"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Title After:" Margin="0 4"/>
         <TextBox Grid.Row="4" Grid.Column="1" Margin="0 4" x:Name="TitleAfterTextBox"
                  TextChanged="OnTextChanged"/>
 
         <!-- row 5 = email -->
-        <TextBlock Grid.Row="5" Grid.Column="0" Text="Email*" Margin="0 4"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="*Email:" Margin="0 4"/>
         <TextBox Grid.Row="5" Grid.Column="1" Margin="0 4" x:Name="EmailTextBox"
                  TextChanged="OnTextChanged"/>
 
         <!-- row 6 = position -->
-        <TextBlock Grid.Row="6" Grid.Column="0" Text="Position" Margin="0 4"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Position:" Margin="0 4"/>
         <TextBox Grid.Row="6" Grid.Column="1" Margin="0 4" x:Name="PositionTextBox"
                  TextChanged="OnTextChanged"/>
 
         <!-- row 7 = department -->
-        <TextBlock Grid.Row="7" Grid.Column="0" Text="Department*" Margin="0 4"/>
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="*Department:" Margin="0 4"/>
         <TextBox Grid.Row="7" Grid.Column="1" Margin="0 4" x:Name="DepartmentTextBox"
                  TextChanged="OnTextChanged"/>
 

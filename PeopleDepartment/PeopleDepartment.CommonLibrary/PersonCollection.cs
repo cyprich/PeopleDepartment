@@ -7,7 +7,7 @@ namespace PeopleDepartment.CommonLibrary
     {
         public int Count { get; }
         public bool IsReadOnly { get; }
-        public event NotifyCollectionChangedEventHandler? CollectionChanged;  // TODO
+        public event NotifyCollectionChangedEventHandler? CollectionChanged;  
         private readonly List<Person> _people = [];
 
         public void Add(Person person)
@@ -157,8 +157,7 @@ namespace PeopleDepartment.CommonLibrary
 
         public void CopyTo(Person[] array, int arrayIndex)
         {
-            // TODO
-            throw new NotImplementedException();
+            _people.CopyTo(array, arrayIndex);
         }
 
         public IEnumerator<Person> GetEnumerator() { return _people.GetEnumerator(); }

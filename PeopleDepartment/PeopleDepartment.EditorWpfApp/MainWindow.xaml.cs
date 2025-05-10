@@ -21,7 +21,6 @@ namespace PeopleDepartment.EditorWpfApp
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private readonly PersonCollection _personCollection = new();
-        private DepartmentReport[]? _reports;
         private bool _wasCollectionModified = false;
 
         private bool _editEnabled;
@@ -47,37 +46,24 @@ namespace PeopleDepartment.EditorWpfApp
 
         private void HandleNew(object sender, RoutedEventArgs e)
         {
-            if (_wasCollectionModified)
+            if (HandleModifiedCollection())
             {
-                var response = MessageBox.Show(
-                    "The collection has been modified. Do you want to save it?",
-                    "Save collection",
-                    MessageBoxButton.YesNoCancel);
-
-                if (response == MessageBoxResult.Yes)
-                {
-                    HandleSave(sender, e);
-                }
-                else if (response == MessageBoxResult.Cancel)
-                {
-                    return;
-                }
+                _personCollection.Clear();
             }
-
-            _personCollection.Clear();
-            _wasCollectionModified = false;
         }
 
         private void HandleOpen(object sender, RoutedEventArgs e)
         {
-            var openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
-
-            if (openFileDialog.ShowDialog() == true)
+            if (HandleModifiedCollection())
             {
-                var filename = openFileDialog.FileName;
-                _personCollection.LoadFromCsv(new FileInfo(filename));
-                _reports = _personCollection.GenerateDepartmentReports();
+                var openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    var filename = openFileDialog.FileName;
+                    _personCollection.LoadFromCsv(new FileInfo(filename));
+                }
             }
         }
 
@@ -116,6 +102,7 @@ namespace PeopleDepartment.EditorWpfApp
 
             _wasCollectionModified = true;
         }
+
         private void HandleEdit(object sender, RoutedEventArgs e)
         {
             int count = MainDataGrid.SelectedItems.Count;
@@ -176,7 +163,36 @@ namespace PeopleDepartment.EditorWpfApp
 
         private void HandleExit(object sender, RoutedEventArgs e)
         {
-            Close();
+            if (HandleModifiedCollection())
+            {
+                Close();
+            }
+        }
+
+        // return - true if run correctly - user did not press "Cancel" - thus can be deleted
+        private bool HandleModifiedCollection()
+        {
+            if (_wasCollectionModified)
+            {
+                var result = MessageBox.Show(
+                    "The collection has been modified. Do you want to save it?",
+                    "Save collection",
+                    MessageBoxButton.YesNoCancel, 
+                    MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    HandleSave(this, new RoutedEventArgs());
+                }
+                else if (result == MessageBoxResult.Cancel)
+                {
+                    return false;
+                }
+
+                _wasCollectionModified = false;
+            }
+
+            return true;
         }
 
         private void MainDataGrid_OnSelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)

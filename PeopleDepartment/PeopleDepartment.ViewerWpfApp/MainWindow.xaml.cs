@@ -25,6 +25,20 @@ namespace PeopleDepartment.ViewerWpfApp
         public MainWindow(PersonCollection? personCollection = null)
         {
             InitializeComponent();
+
+            if (personCollection != null)
+            {
+                _personCollection = personCollection;
+                OpenButton.IsEnabled = false;
+                GenerateReports();
+            }
+        }
+
+        private void GenerateReports()
+        {
+            _reports = _personCollection.GenerateDepartmentReports();
+            DepartmentComboBox.ItemsSource = _reports.Select(r => r.Department);
+            DepartmentComboBox.SelectedIndex = 0;
         }
 
         private void OpenButton_OnClick(object sender, RoutedEventArgs e)
@@ -36,9 +50,7 @@ namespace PeopleDepartment.ViewerWpfApp
             {
                 var filename = openFileDialog.FileName;
                 _personCollection.LoadFromCsv(new FileInfo(filename));
-                _reports = _personCollection.GenerateDepartmentReports();
-                DepartmentComboBox.ItemsSource = _reports.Select(r => r.Department);
-                DepartmentComboBox.SelectedIndex = 0;
+                GenerateReports();
             }
         }
 

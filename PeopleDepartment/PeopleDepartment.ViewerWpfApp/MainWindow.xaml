@@ -27,10 +27,10 @@
         <!-- row 0 = open, department select -->
         <Button Click="OpenButton_OnClick" Content="Open..." 
                 Padding="8,4" Margin="0,0,8,0" 
-                Grid.Row="0" Grid.Column="0"/>
+                Grid.Row="0" Grid.Column="0" x:Name="OpenButton"/>
         <TextBlock Text="Department" VerticalAlignment="Center" 
                    Margin="0,0,8,0"  
-                   Grid.Row="0" Grid.Column="1" />
+                   Grid.Row="0" Grid.Column="1"/>
         <ComboBox x:Name="DepartmentComboBox" VerticalAlignment="Center" 
                   Padding="8,4" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
                   SelectionChanged="DepartmentComboBox_OnSelectionChanged"/>
