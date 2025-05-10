@@ -34,6 +34,8 @@ namespace PeopleDepartment.EditorWpfApp
 
             EditEnabled = false;
             RemoveEnabled = false;
+
+            MainDataGrid.ItemsSource = _personCollection;
         }
 
 
@@ -63,6 +65,7 @@ namespace PeopleDepartment.EditorWpfApp
             }
 
             _personCollection.Clear();
+            _wasCollectionModified = false;
         }
 
         private void HandleOpen(object sender, RoutedEventArgs e)
@@ -75,7 +78,6 @@ namespace PeopleDepartment.EditorWpfApp
                 var filename = openFileDialog.FileName;
                 _personCollection.LoadFromCsv(new FileInfo(filename));
                 _reports = _personCollection.GenerateDepartmentReports();
-                MainDataGrid.ItemsSource = _personCollection;
             }
         }
 
@@ -93,7 +95,7 @@ namespace PeopleDepartment.EditorWpfApp
 
         private void HandleView(object sender, RoutedEventArgs e)
         {
-            var viewer = new PeopleDepartment.ViewerWpfApp.MainWindow();
+            var viewer = new PeopleDepartment.ViewerWpfApp.MainWindow(_personCollection);
             viewer.ShowDialog();
         }
 
@@ -111,12 +113,41 @@ namespace PeopleDepartment.EditorWpfApp
                     addWindow.Department
                 ));
             }
+
+            _wasCollectionModified = true;
         }
         private void HandleEdit(object sender, RoutedEventArgs e)
         {
-            var addWindow = new AddEditWindow();
-            addWindow.ShowDialog();
-            // TODO
+            int count = MainDataGrid.SelectedItems.Count;
+            if (count < 1)
+            {
+                MessageBox.Show("You did not provide person to edit", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (count > 1)
+            {
+                MessageBox.Show("You can edit only one person at one time", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            Person person = MainDataGrid.SelectedItems.Cast<Person>().First();
+
+            var editWindow = new AddEditWindow(person);
+            if (editWindow.ShowDialog() == true)
+            {
+                person.FirstName = editWindow.FirstName;
+                person.LastName = editWindow.LastName;
+                person.DisplayName = editWindow.DisplayName;
+                person.TitleBefore = editWindow.TitleBefore;
+                person.TitleAfter = editWindow.TitleAfter;
+                person.Position = editWindow.Position;
+                person.Email = editWindow.Email;
+                person.Department = editWindow.Department;
+            }
+
+            _wasCollectionModified = true;
         }
 
         private void HandleRemove(object sender, RoutedEventArgs e)
@@ -139,6 +170,8 @@ namespace PeopleDepartment.EditorWpfApp
                     _personCollection.Remove(person);
                 }
             }
+
+            _wasCollectionModified = true;
         }
 
         private void HandleExit(object sender, RoutedEventArgs e)
@@ -148,8 +181,9 @@ namespace PeopleDepartment.EditorWpfApp
 
         private void MainDataGrid_OnSelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
-            EditEnabled = MainDataGrid.SelectedItems.Count == 1;
-            RemoveEnabled = MainDataGrid.SelectedItems.Count >= 1;
+            int count = MainDataGrid.SelectedItems.Count;
+            EditEnabled = count == 1;
+            RemoveEnabled = count >= 1;
         }
 
         // https://learn.microsoft.com/en-au/answers/questions/1857029/how-to-dynamically-enable-a-button-in-wpf-forms-wi

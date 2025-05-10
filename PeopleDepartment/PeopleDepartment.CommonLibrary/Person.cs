@@ -7,8 +7,8 @@ namespace PeopleDepartment.CommonLibrary
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string DisplayName { get; set; }
-        public string? TitleBefore { get; }
-        public string? TitleAfter { get; }
+        public string? TitleBefore { get; set; }
+        public string? TitleAfter { get; set; }
         public string? Position { get; set; }
         public string Email { get; set; }
         public string Department { get; set; }

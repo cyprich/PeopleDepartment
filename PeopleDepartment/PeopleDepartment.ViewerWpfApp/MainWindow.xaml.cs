@@ -22,7 +22,7 @@ namespace PeopleDepartment.ViewerWpfApp
         private readonly PersonCollection _personCollection = new();
         private DepartmentReport[]? _reports;
 
-        public MainWindow()
+        public MainWindow(PersonCollection? personCollection = null)
         {
             InitializeComponent();
         }

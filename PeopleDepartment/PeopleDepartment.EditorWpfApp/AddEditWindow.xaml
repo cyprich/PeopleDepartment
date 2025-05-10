@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PeopleDepartment.EditorWpfApp"
         mc:Ignorable="d"
-        Title="People Department Editor" Height="320" Width="240">
+        Title="People Department Editor" Height="400" Width="300">
     <Grid Margin="8">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -20,6 +20,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -30,38 +31,44 @@
 
         <!-- row 1 = title before -->
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Title Before" Margin="0 4"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Margin="0 4" x:Name="TitleBeforeTextBox" TextChanged="OnTextChanged"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="0 4" x:Name="TitleBeforeTextBox" 
+                 TextChanged="OnTextChanged"/>
 
         <!-- row 2 = first name -->
         <TextBlock Grid.Row="2" Grid.Column="0" Text="First Name*" Margin="0 4"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Margin="0 4" x:Name="FirstNameTextBox"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0 4" x:Name="FirstNameTextBox"
+                 TextChanged="OnTextChanged"/>
 
         <!-- row 3 = last name -->
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Last Name*" Margin="0 4"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Margin="0 4" x:Name="LastNameTextBox"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="0 4" x:Name="LastNameTextBox"
+                 TextChanged="OnTextChanged"/>
 
         <!-- row 4 = title after -->
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Title After" Margin="0 4"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Margin="0 4" x:Name="TitleAfterTextBox"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="0 4" x:Name="TitleAfterTextBox"
+                 TextChanged="OnTextChanged"/>
 
         <!-- row 5 = email -->
         <TextBlock Grid.Row="5" Grid.Column="0" Text="Email*" Margin="0 4"/>
-        <TextBox Grid.Row="5" Grid.Column="1" Margin="0 4" x:Name="EmailTextBox"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="0 4" x:Name="EmailTextBox"
+                 TextChanged="OnTextChanged"/>
 
         <!-- row 6 = position -->
         <TextBlock Grid.Row="6" Grid.Column="0" Text="Position" Margin="0 4"/>
-        <TextBox Grid.Row="6" Grid.Column="1" Margin="0 4" x:Name="PositionTextBox"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Margin="0 4" x:Name="PositionTextBox"
+                 TextChanged="OnTextChanged"/>
 
         <!-- row 7 = department -->
         <TextBlock Grid.Row="7" Grid.Column="0" Text="Department*" Margin="0 4"/>
-        <TextBox Grid.Row="7" Grid.Column="1" Margin="0 4" x:Name="DepartmentTextBox"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Margin="0 4" x:Name="DepartmentTextBox"
+                 TextChanged="OnTextChanged"/>
 
         <!-- row 8 = required -->
-        <TextBlock Grid.Row="8" Grid.Column="0" Text="*Required" Margin="0 4" FontSize="10"/>
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="*Required item" Margin="0 4" FontSize="10"/>
 
         <!-- row 8 = buttons -->
-        <TextBlock Grid.Row="7" Grid.Column="0" Text="Department" Margin="0 4"/>
-        <StackPanel Grid.Row="8" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 2">
+        <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 2">
             <Button Content="OK" Padding="8 2" Margin="4 0" Click="OkButton_OnClick"/>
             <Button Content="Cancel" Padding="8 2" Click="CancelButton_OnClick"/>
         </StackPanel>

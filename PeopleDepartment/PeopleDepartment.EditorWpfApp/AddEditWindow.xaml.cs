@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PeopleDepartment.CommonLibrary;
 
 namespace PeopleDepartment.EditorWpfApp
 {
@@ -29,9 +30,32 @@ namespace PeopleDepartment.EditorWpfApp
         public string Department { get; set; } = "";
 
 
-        public AddEditWindow()
+        public AddEditWindow(Person? person = null)
         {
             InitializeComponent();
+
+            if (person != null)
+            {
+                FirstName = person.FirstName;
+                LastName = person.LastName;
+                DisplayName = person.DisplayName;
+                TitleBefore = person.TitleBefore;
+                TitleAfter = person.TitleAfter;
+                Position = person.Position;
+                Email = person.Email;
+                Department = person.Department;
+
+                FirstNameTextBox.Text = person.FirstName;
+                LastNameTextBox.Text = person.LastName;
+                DisplayNameTextBox.Text = person.DisplayName;
+                TitleBeforeTextBox.Text = person.TitleBefore ?? "";
+                TitleAfterTextBox.Text = person.TitleAfter ?? "";
+                PositionTextBox.Text = person.Position ?? "";
+                EmailTextBox.Text = person.Email;
+                DepartmentTextBox.Text = person.Department;
+
+                OnTextChanged(this, null);
+            }
         }
 
         private void OkButton_OnClick(object sender, RoutedEventArgs e)
@@ -60,7 +84,7 @@ namespace PeopleDepartment.EditorWpfApp
             Close();
         }
 
-        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        private void OnTextChanged(object sender, TextChangedEventArgs? e)
         {
             FirstName = FirstNameTextBox.Text.Trim();
             LastName = LastNameTextBox.Text.Trim();
@@ -68,17 +92,19 @@ namespace PeopleDepartment.EditorWpfApp
             TitleAfter = TitleAfterTextBox.Text.Trim();
 
             DisplayName = "";
-            if (TitleBefore != "")
+            if (!string.IsNullOrWhiteSpace(TitleBefore))
             {
                 DisplayName += $"{TitleBefore} ";
             }
 
             DisplayName += $"{FirstName} {LastName}";
 
-            if (TitleBefore != "")
+            if (!string.IsNullOrWhiteSpace(TitleAfter))
             {
                 DisplayName += $", {TitleAfter}";
             }
+
+            DisplayNameTextBox.Text = DisplayName;
         }
 
         private bool ValidateParameters()
