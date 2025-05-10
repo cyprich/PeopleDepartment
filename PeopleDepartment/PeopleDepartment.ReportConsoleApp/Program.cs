@@ -12,8 +12,7 @@ internal class Program
         ParseArgs(args);
 
         PersonCollection allPeople = new();
-        allPeople.LoadFromCSV(new FileInfo("people-fri.csv"));
-        //allPeople.saveToCSV(new FileInfo("pokus.csv"));
+        allPeople.LoadFromCsv(new FileInfo(InputArg));
         var reports = allPeople.GenerateDepartmentReports();
 
         Output(reports);

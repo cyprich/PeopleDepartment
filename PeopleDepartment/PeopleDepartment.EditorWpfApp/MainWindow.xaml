@@ -74,12 +74,12 @@
             <!-- column 3 row 3 - edit -->
             <Button Grid.Row="2" Grid.Column="5" Content="Edit..."
                 Padding="8 4"  Margin="0 4"
-                Click="HandleEdit"/>
+                Click="HandleEdit" IsEnabled="{Binding EditEnabled}"/>
 
             <!-- column 3 row 4 - remove -->
             <Button Grid.Row="3" Grid.Column="5" Content="Remove"
                 Padding="8 4"  Margin="0 4"
-                Click="HandleRemove"/>
+                Click="HandleRemove" IsEnabled="{Binding RemoveEnabled}"/>
 
             <!-- column 3 row 5 - remove -->
             <StackPanel Grid.Row="4" Grid.Column="5">
@@ -89,7 +89,9 @@
             </StackPanel>
             
             <!-- main content - datagrid -->
-            <DataGrid x:Name="MainDataGrid"  Grid.Row="1" Grid.Column="0" 
+            <DataGrid x:Name="MainDataGrid" ItemsSource="{Binding _personCollection}"
+                SelectedCellsChanged="MainDataGrid_OnSelectedCellsChanged"
+                Grid.Row="1" Grid.Column="0" 
                 Grid.ColumnSpan="5"  Grid.RowSpan="5"
                 Margin="0 4 4 0" 
                 AutoGenerateColumns="False" IsReadOnly="True">

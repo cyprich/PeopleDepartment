@@ -35,7 +35,7 @@ namespace PeopleDepartment.ViewerWpfApp
             if (openFileDialog.ShowDialog() == true)
             {
                 var filename = openFileDialog.FileName;
-                _personCollection.LoadFromCSV(new FileInfo(filename));
+                _personCollection.LoadFromCsv(new FileInfo(filename));
                 _reports = _personCollection.GenerateDepartmentReports();
                 DepartmentComboBox.ItemsSource = _reports.Select(r => r.Department);
                 DepartmentComboBox.SelectedIndex = 0;

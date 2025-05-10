@@ -3,48 +3,50 @@ using System.Collections.Specialized;
 
 namespace PeopleDepartment.CommonLibrary
 {
-    public class PersonCollection: ICollection<Person>, INotifyCollectionChanged
+    public class PersonCollection : ICollection<Person>, INotifyCollectionChanged
     {
         public int Count { get; }
         public bool IsReadOnly { get; }
         public event NotifyCollectionChangedEventHandler? CollectionChanged;  // TODO
         private readonly List<Person> _people = [];
 
-        public void Add(Person person) { _people.Add(person); }
-
-        public void CopyTo(Person[] array, int arrayIndex)
+        public void Add(Person person)
         {
-            // TODO
-            throw new NotImplementedException();
+            _people.Add(person);
+            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, person));
         }
 
-        public bool Remove(Person person) { return _people.Remove(person); }
-
-        public IEnumerator<Person> GetEnumerator() { return _people.GetEnumerator(); }
-
-        public void LoadFromCSV(FileInfo csvFile)
+        public bool Remove(Person person)
         {
-            var lines = File.ReadAllLines(csvFile.FullName);
-
-            lines = lines[1..];  // skip first line with field names
-
-            foreach (var line in lines)
+            int index = _people.IndexOf(person);
+            if (index >= 0)
             {
-                var s = line.Split(";");
-                Add(new Person(s[0], s[1], s[2], s[3], s[4], s[5]));
+                _people.RemoveAt(index);
+                OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, person, index));
+                return true;
             }
+
+            return false;
         }
 
-        public void saveToCSV(FileInfo csvFile)
+        public void Clear()
         {
-            var lines = new List<string>();
+            _people.Clear(); 
+            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+
+        public bool Contains(Person person) { return _people.Contains(person); }
+
+        public override string ToString()
+        {
+            string result = "";
 
             foreach (var p in _people)
             {
-                lines.Add(p.ToCSV());
+                result += $"{p.ToFormattedString()}\n";
             }
 
-            File.WriteAllLines(csvFile.Name, lines);
+            return result;
         }
 
         public DepartmentReport[] GenerateDepartmentReports()
@@ -56,9 +58,9 @@ namespace PeopleDepartment.CommonLibrary
             {
                 string currentDepartmentName = "";
                 Person? head = null;
-                Person? deputy = null; 
+                Person? deputy = null;
                 Person? secretary = null;
-                List<Person> employees = []; 
+                List<Person> employees = [];
                 List<Person> phDStudents = [];
                 int profs = 0;
                 int docs = 0;
@@ -128,25 +130,47 @@ namespace PeopleDepartment.CommonLibrary
             return result.ToArray();
         }
 
-        public void Clear() { _people.Clear(); }
-
-        public bool Contains(Person person) { return _people.Contains(person); }
-
-        public override string ToString()
+        public void LoadFromCsv(FileInfo csvFile)
         {
-            string result = "";
+            var lines = File.ReadAllLines(csvFile.FullName);
+
+            lines = lines[1..];  // skip first line with field names
+
+            foreach (var line in lines)
+            {
+                var s = line.Split(";");
+                Add(new Person(s[0], s[1], s[2], s[3], s[4], s[5]));
+            }
+        }
+
+        public void SaveToCsv(FileInfo csvFile)
+        {
+            var lines = new List<string>();
 
             foreach (var p in _people)
             {
-                result += $"{p.ToFormattedString()}\n";
+                lines.Add(p.ToCSV());
             }
 
-            return result;
+            File.WriteAllLines(csvFile.FullName, lines);
         }
+
+        public void CopyTo(Person[] array, int arrayIndex)
+        {
+            // TODO
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator<Person> GetEnumerator() { return _people.GetEnumerator(); }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        protected void OnCollectionChanged(NotifyCollectionChangedEventArgs args)
+        {
+            CollectionChanged?.Invoke(this, args);
         }
     }
 }
